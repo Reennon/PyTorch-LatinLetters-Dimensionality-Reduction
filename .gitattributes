@@ -1,0 +1,4 @@
+datasets/latin_data.csv filter=lfs diff=lfs merge=lfs -text
+models/alexnet/AlexNet_1122_10_09_13.pth filter=lfs diff=lfs merge=lfs -text
+models/AlexNet_1122_10_09_13.pth filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
