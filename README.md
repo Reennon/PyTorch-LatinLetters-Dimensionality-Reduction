@@ -1,12 +1,15 @@
-##PyTorch-LatinLetters-Dimensionality-Reduction
+## PyTorch LatinLetters Dimensionality Reduction
 Description
 ---
+Dimensionality Reduction based on Latin Letters image classification
+
 Model based on AlexNet, that classifies 26 classes of latin laters, based on [CoMNIST](https://github.com/GregVial/CoMNIST) dataset.\
 Along with classfification I added a dimensionality reduction methods such as: PCA, Low Variance Filter, High Correlation Filter
 
 Example of classification with ~91% Acuracy:
 
-\<image>
+![зображення](https://user-images.githubusercontent.com/37474734/142851107-cbaac9d4-1570-48a7-9c78-e64857129e5b.png)
+
 
 Data separation between training and validation datatasets are .85 to .15 with 15k of sample images stored as numpy arrays in csv file
 Made by using [CoMNIST](https://github.com/GregVial/CoMNIST) Dataset with latin letters
@@ -38,4 +41,5 @@ alexnet.load_state_dict(torch.load(PATH))
 
 Also below I attached a sample of how estimately should the model train for CoMNIST dataset, if you decided to train the model on your own
 
-\<image>
+![зображення](https://user-images.githubusercontent.com/37474734/142851130-ef97eede-599a-435e-9420-a9e7ed0e7bf0.png)
+
