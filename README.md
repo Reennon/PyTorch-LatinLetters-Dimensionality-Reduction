@@ -3,8 +3,8 @@ Description
 ---
 Dimensionality Reduction based on Latin Letters image classification
 
-Model based on AlexNet, that classifies 26 classes of latin laters, based on [CoMNIST](https://github.com/GregVial/CoMNIST) dataset.\
-Along with classfification I added a dimensionality reduction methods such as: PCA, Low Variance Filter, High Correlation Filter
+Model based on AlexNet, that classifies 26 classes of latin laters, based on original [CoMNIST](https://github.com/GregVial/CoMNIST) dataset.\
+Transformed CoMNIST dataset is reduced by using UMAP method
 
 Example of classification with ~91% Acuracy:
 
