@@ -7,7 +7,7 @@ from datetime import datetime
 class Constants:
     LATIN_DATA_CSV = './datasets/latin_data.csv'
     LATIN_LABEL_CSV = './datasets/latin_label.csv'
-    REDUCED_LATIN_DATA_PTH = 'D:/Documents/MAI/Course/datasets/reduced/latin_data'
+    REDUCED_LATIN_DATA_PTH = 'D:/Documents/MAI/Course/datasets/reduced/latin_data_{version}'
     DATE_TIME_FORMAT = '%m_%d_%H_%M_%S'
     UMAP_SERIALIZED = './models/umap/UMAP_{version}'
 
@@ -20,11 +20,11 @@ class VersionFormatter:
 
 if __name__ == '__main__':
     reducer = UMAP(
-        n_neighbors=100,
+        n_neighbors=50,
         n_components=3,
         n_epochs=1000,
         min_dist=0.5,
-        local_connectivity=10,
+        local_connectivity=5,
         random_state=42
     )
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     from numpy import save
 
-    save(Constants.REDUCED_LATIN_DATA_PTH, images_reduced_a)
+    save(Constants.REDUCED_LATIN_DATA_PTH.format(version = version), images_reduced_a)
 
     print(f'Saved reduced CoMNIST dataset with UMAP, to {Constants.REDUCED_LATIN_DATA_PTH.format(version = version)}.npy')
 
@@ -49,10 +49,10 @@ if __name__ == '__main__':
         pickle.dump(reducer, file)
 
     print(f'''
-    To Load UMAP Reducer class, use:
-    '
-    import pickle
-    
-    reducer = pickle.load({Constants.UMAP_SERIALIZED.format(version = version)}.pth)
-    '
+To Load UMAP Reducer class, use:
+'
+import pickle
+
+reducer = pickle.load({Constants.UMAP_SERIALIZED.format(version = version)}.pth)
+'
     ''')
