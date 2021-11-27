@@ -22,11 +22,23 @@ UMAP
 
 Attached few samples of how reduced dataset by the UMAP looks
 
-![зображення](https://user-images.githubusercontent.com/37474734/143688835-ef380d54-0dbc-4700-95cd-8455b8131ef2.png)
+![зображення](https://user-images.githubusercontent.com/37474734/143690501-74cc49d8-4cf9-4bce-8148-6db17f9d15b2.png)
+
+For the one above I used these hyperparameters:
+```
+reducer = UMAP(
+    n_neighbors=50,
+    n_components=3,
+    n_epochs=1000,
+    min_dist=0.5,
+    local_connectivity=5,
+    random_state=42
+)
+```
 
 ![зображення](https://user-images.githubusercontent.com/37474734/143688821-acaf79c0-d29e-43c7-ac28-f34ff3504010.png)
 
-Fot this one I used hyperparameters below:
+And, for this one I used hyperparameters below:
 ```
 reducer = UMAP(
     n_neighbors=100,
@@ -38,19 +50,7 @@ reducer = UMAP(
 )
 ```
 
-![зображення](https://user-images.githubusercontent.com/37474734/143690501-74cc49d8-4cf9-4bce-8148-6db17f9d15b2.png)
 
-And, for the one above I used these hyperparameters:
-```
-reducer = UMAP(
-    n_neighbors=50,
-    n_components=3,
-    n_epochs=1000,
-    min_dist=0.5,
-    local_connectivity=5,
-    random_state=42
-)
-```
 
 
 > UMAP Implementation I used https://umap-learn.readthedocs.io/en/latest/index.html
