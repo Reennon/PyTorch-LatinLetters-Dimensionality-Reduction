@@ -1,0 +1,4 @@
+outs:
+- md5: fa5a458667c6e96c7521ab7431f04289
+  size: 228385327
+  path: AlexNet_1122_11_02_28.pth
