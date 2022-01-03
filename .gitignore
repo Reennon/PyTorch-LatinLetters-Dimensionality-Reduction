@@ -137,8 +137,4 @@ dmypy.json
 /.idea
 .idea/*
 
-# */datasets/
-# datasets/
-#*/models/
-#models/
 models/reducedlatinnet/*
