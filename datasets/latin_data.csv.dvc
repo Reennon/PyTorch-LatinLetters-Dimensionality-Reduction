@@ -1,0 +1,4 @@
+outs:
+- md5: 72dd22b3a946cf0c33efc33b53bfbf4b
+  size: 251324022
+  path: latin_data.csv

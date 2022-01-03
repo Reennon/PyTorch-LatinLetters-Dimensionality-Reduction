@@ -1,0 +1,4 @@
+outs:
+- md5: d3377f620b22ecc415c9e147dcba2e1c
+  size: 153992
+  path: latin_data.npy
